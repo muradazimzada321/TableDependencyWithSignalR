@@ -1,3 +1,6 @@
+using Microsoft.AspNetCore.SignalR;
+using TableDependencyWithSignalR.Hubs;
+
 namespace TableDependencyWithSignalR
 {
     public class Program
@@ -8,7 +11,7 @@ namespace TableDependencyWithSignalR
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-
+            builder.Services.AddSignalR();  
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -25,7 +28,7 @@ namespace TableDependencyWithSignalR
             app.UseRouting();
 
             app.UseAuthorization();
-
+            app.MapHub<DashboardHub>("/dashboardhub");
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
