@@ -1,8 +1,6 @@
-﻿using MediatR;
-
-namespace TableDependencyWithSignalR.Mediatr.Queries.ProductQueries
+﻿global using  MediatR;
+global using TableDependencyWithSignalR.Models;
+namespace TableDependencyWithSignalR.Mediatr.Queries.ProductQueries;
+public class GetAllProductsQuery : IRequest<List<Product>>
 {
-    public class GetAllProductsQuery : IRequest<List<Product>>
-    {
-    }
 }

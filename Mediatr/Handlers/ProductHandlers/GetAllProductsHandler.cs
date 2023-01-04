@@ -11,10 +11,12 @@ public class GetAllProductsHandler : IRequestHandler<GetAllProductsQuery, List<P
     public GetAllProductsHandler(ProductRepository productRepository, IMapper mapper)
     {
         this.productRepository = productRepository;
+        this.mapper = mapper;   
     }
 
     public Task<List<Product>> Handle(GetAllProductsQuery request, CancellationToken cancellationToken)
     {
+        mapper.
         throw new NotImplementedException();
     }
 }

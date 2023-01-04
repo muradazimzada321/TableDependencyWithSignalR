@@ -1,6 +1,13 @@
-﻿namespace TableDependencyWithSignalR.Repositories.Concret
+﻿using System.Data;
+using TableDependencyWithSignalR.Repositories.Abstract;
+
+namespace TableDependencyWithSignalR.Repositories.Concret
 {
-    public class ProductRepository
+    public class ProductRepository : IRepository
     {
+        public DataTable GetAll()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
