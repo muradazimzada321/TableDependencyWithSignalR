@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "defaultProvider": "unpkg",
+  "libraries": [
+    {
+      "library": "chartjs@0.3.24",
+      "destination": "wwwroot/chartjs/"
+    },
+    {
+      "library": "@microsoft/signalr@7.0.0",
+      "destination": "Properties/microsoft/signalr/"
+    }
+  ]
+}
