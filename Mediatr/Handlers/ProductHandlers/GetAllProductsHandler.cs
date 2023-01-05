@@ -7,16 +7,15 @@ namespace TableDependencyWithSignalR.Mediatr.Handlers.ProductHandlers;
 public class GetAllProductsHandler : IRequestHandler<GetAllProductsQuery, List<Product>>
 {
     private readonly ProductRepository productRepository;
-    private readonly IMapper mapper;
-    public GetAllProductsHandler(ProductRepository productRepository, IMapper mapper)
+    public GetAllProductsHandler(ProductRepository productRepository)
     {
         this.productRepository = productRepository;
-        this.mapper = mapper;   
     }
 
-    public Task<List<Product>> Handle(GetAllProductsQuery request, CancellationToken cancellationToken)
+    public async Task<List<Product>> Handle(GetAllProductsQuery request, CancellationToken cancellationToken)
     {
-        mapper.
-        throw new NotImplementedException();
+
+        var products = await productRepository.GetAll();
+        return products;
     }
 }

@@ -9,6 +9,10 @@
     {
       "library": "@microsoft/signalr@7.0.0",
       "destination": "Properties/microsoft/signalr/"
+    },
+    {
+      "library": "jquery@3.6.3",
+      "destination": "wwwroot/jquery/"
     }
   ]
 }

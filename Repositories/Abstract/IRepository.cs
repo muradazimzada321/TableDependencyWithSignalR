@@ -2,8 +2,8 @@
 
 namespace TableDependencyWithSignalR.Repositories.Abstract
 {
-    public interface IRepository
+    public interface IRepository<T> where T : ModelBase
     {
-        public DataTable GetAll();
+        public Task<List<T>> GetAll();
     }
 }
